@@ -1,5 +1,5 @@
 🔁 DevPubMapperMod
-This mod allows you to dynamically remap Developer-to-Publisher relationships over time. You can define mappings by ID, with optional year-based conditions to simulate mergers, acquisitions, or historical transitions.
+This mod allows you to dynamically remap Developer-to-Publisher relationships over time. You can define mappings by ID, with optional year-based conditions.
 
 📘 Example configuration (dev_pub_map.txt)
 ```txt
