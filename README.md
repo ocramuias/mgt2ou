@@ -37,6 +37,23 @@ The |0 sets the logo ID (optional).
 
 🚫 Note: Custom names do not apply to subsidiaries owned by the player—they retain their original names for consistency.
 
+📄 fusion_map.txt Format – Fusion Mod
+This file defines company mergers by mapping an old company ID to a new owner ID starting from a specific year. Each line represents one fusion event.
+
+```txt
+[OLD_ID]=[NEW_ID],[YEAR]
+Example:
+125=126,1978
+```
+
+Explanation:
+In 1978, company with ID 125 (e.g., Test Slave) is merged into company with ID 126 (e.g., Test Master).
+
+All IPs and games owned by 125 are transferred to 126.
+Company 125 is hidden after the merger (not deleted, just deactivated).
+You can define multiple fusions for the same company if needed, in chronological order.
+
+
 📦 Compatibility
 The two mods are fully optional and work independently or together.
 Easily configurable via .txt files located in BepInEx/config.
@@ -44,3 +61,5 @@ Easily configurable via .txt files located in BepInEx/config.
 🛠️ Requirements
 Requires BepInEx installed in your game.
 Automatically loaded at game start.
+
+
