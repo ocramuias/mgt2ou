@@ -2,13 +2,15 @@
 This mod allows you to dynamically remap Developer-to-Publisher relationships over time. You can define mappings by ID, with optional year-based conditions to simulate mergers, acquisitions, or historical transitions.
 
 📘 Example configuration (dev_pub_map.txt)
-```# DeveloperID=PublisherID
+```txt
+# DeveloperID=PublisherID
 # Year-based mapping
 12,1976=3
 12,1977=4
 12,1978=14
 # Permanent mapping without year
-8=3```
+8=3
+```
 
 ✅ What it does:
 Developer ID 12 changes publisher across different years: from 3 to 4 to 14.
