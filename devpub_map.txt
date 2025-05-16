@@ -1,0 +1,9 @@
+# DeveloperID=PublisherID
+
+# Mapping con anno
+12,1976=3
+12,1977=4
+12,1978=14
+
+# Mapping fisso senza anno
+8=3
