@@ -20,10 +20,12 @@ Developer 8 is always mapped to publisher 3.
 This mod lets you customize a publisher's name and logo over time based on the current year. You can reflect brand evolution, historical naming, or internal storytelling.
 
 📘 Example configuration (publisher_name_map.txt)
-```16,1977=This was Microsoft|0
+```txt
+16,1977=This was Microsoft|0
 16,1985=Microsoft|0
 16,2000=Xbox Studios|0
-16=Microsoft|0```
+16=Microsoft|0
+```
 
 ✅ What it does:
 Publisher ID 16 will display different names over time:
