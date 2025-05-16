@@ -49,6 +49,8 @@ Example:
 Explanation:
 In 1978, company with ID 125 (e.g., Test Slave) is merged into company with ID 126 (e.g., Test Master).
 
+NOTE: You can use the PublisherNameChangeMod for change name of the company.
+
 All IPs and games owned by 125 are transferred to 126.
 Company 125 is hidden after the merger (not deleted, just deactivated).
 You can define multiple fusions for the same company if needed, in chronological order.
