@@ -2,13 +2,13 @@
 This mod allows you to dynamically remap Developer-to-Publisher relationships over time. You can define mappings by ID, with optional year-based conditions to simulate mergers, acquisitions, or historical transitions.
 
 📘 Example configuration (dev_pub_map.txt)
-# DeveloperID=PublisherID
+```# DeveloperID=PublisherID
 # Year-based mapping
 12,1976=3
 12,1977=4
 12,1978=14
 # Permanent mapping without year
-8=3
+8=3```
 
 ✅ What it does:
 Developer ID 12 changes publisher across different years: from 3 to 4 to 14.
@@ -18,10 +18,10 @@ Developer 8 is always mapped to publisher 3.
 This mod lets you customize a publisher's name and logo over time based on the current year. You can reflect brand evolution, historical naming, or internal storytelling.
 
 📘 Example configuration (publisher_name_map.txt)
-16,1977=This was Microsoft|0
+```16,1977=This was Microsoft|0
 16,1985=Microsoft|0
 16,2000=Xbox Studios|0
-16=Microsoft|0
+16=Microsoft|0```
 
 ✅ What it does:
 Publisher ID 16 will display different names over time:
