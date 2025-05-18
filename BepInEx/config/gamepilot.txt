@@ -1,0 +1,46 @@
+// NOTE GENERALI:
+// - Il nome del gioco è all'inizio della riga, senza tag.
+// - I tag sono racchiusi tra < e > e possono comparire in qualsiasi ordine.
+
+// TAG DISPONIBILI:
+// <P>     = ID del publisher (es. <P3>)
+// <Y>     = Anno di uscita (es. <Y1978>)
+// <G>     = Genere principale (es. <G1>)
+// <SG>    = Sottogenere (es. <SG0>)
+// <T>     = Tema principale (es. <T4>)
+// <ST>    = Sotto-tema (es. <ST1>)
+// <%>     = Valutazione minima desiderata (es. <%80>)
+// <TG>    = Target group (0=bambini, 1=teen, 2=adulti, 3=anziani, 4=tutti)
+// <PLx>   = ID della piattaforma principale (es. <PL49>)
+// <EX>    = Esclusiva (opzionale, se presente forza il flag `exclusive = true`)
+// <SEQ:Titolo>  = Sequel diretto del gioco indicato
+// <REM:Titolo>  = Remaster del gioco indicato
+// <SPIN:Titolo> = Spinoff del gioco indicato
+
+// --- TAG PER LA NUMERAZIONE AUTOMATICA ---
+// <ARA> = Indica che la numerazione automatica è in formato arabo (1, 2, 3, ...) [Not Needed]
+// <ROM> = Indica che la numerazione automatica è in formato romano (I, II, III, ...) [Not Needed]
+// Questi tag vanno messi solo nel gioco originale per indicare come devono essere numerati i sequel. [Not Needed]
+
+// BLOCCO SEQUEL AUTOMATICI:
+// - La mod imposta `noSpinOff = true` automaticamente, non serve usare tag <NOSPIN>.
+
+// ===========================
+// TITOLI NPC PER TEST (1976–1980)
+// ===========================
+
+// --- SERIE: Galaxy Quest (Developer 3, Publisher 3) ---
+Test Galaxy Quest <P3><O3><D3><Y1976><G1><SG0><T4><ST1><%78><TG2><PL49><EX>
+Test Galaxy Quest II <D7><P3><O3><Y1977><G1><SG0><T4><ST1><%82><TG2><PL49><EX><SEQ:Test Galaxy Quest>
+Test Galaxy Quest Remastered <D3><P3><O3><Y1978><G1><SG0><T4><ST1><%88><TG2><PL49><EX><REM:Test Galaxy Quest>
+Test Galaxy Quest: Alien Adventures <D12><P3><O3><Y1979><G5><SG2><T9><ST7><%74><TG3><PL49><SPIN:Test Galaxy Quest>
+Test Galaxy Quest <P3><O3><D3><Y1978><G1><SG0><T4><ST1><%78><TG2><PORT:Test Galaxy Quest><PORTA>
+
+// --- SINGOLO: Sword Age (Developer 12, Publisher 4) ---
+Test Sword Age <D12><P4><O4><Y1977><G2><SG1><T2><ST3><%81><TG1><PL49><EX>
+
+// --- SERIE: Epic Adventure (Developer 4, Publisher 4, Multi-piattaforma) ---
+Test Epic Adventure <P4><D4><O4><Y1976><G3><SG2><T5><ST1><%85><TG2><PL49><PL77><PL20><PL119>
+Test Epic Adventure 2 <D7><P4><O4><Y1977><G3><SG2><T5><ST1><%85><TG2><PL49><PL77><PL20><PL119><SEQ:Test Epic Adventure>
+
+Dodici <D12><P3><O12><Y1976><G1><SG0><T4><ST1><%78><TG2><PL49><EX>
