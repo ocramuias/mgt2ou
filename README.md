@@ -1,4 +1,4 @@
-🔁 DevPubMapperMod
+#🔁 DevPubMapperMod
 This mod allows you to dynamically remap Developer-to-Publisher relationships over time. You can define mappings by ID, with optional year-based conditions.
 
 📘 Example configuration (dev_pub_map.txt)
@@ -16,7 +16,7 @@ This mod allows you to dynamically remap Developer-to-Publisher relationships ov
 Developer ID 12 changes publisher across different years: from 3 to 4 to 14.
 Developer 8 is always mapped to publisher 3.
 
-🎨 PublisherNameChangeMod
+#🎨 PublisherNameChangeMod
 This mod lets you customize a publisher's name and logo over time based on the current year. You can reflect brand evolution, historical naming, or internal storytelling.
 
 📘 Example configuration (publisher_name_map.txt)
@@ -37,7 +37,7 @@ The |0 sets the logo ID (optional).
 
 🚫 Note: Custom names do not apply to subsidiaries owned by the player—they retain their original names for consistency.
 
-📄 fusion_map.txt Format – Fusion Mod
+#📄 fusion_map.txt Format – Fusion Mod
 This file defines company mergers by mapping an old company ID to a new owner ID starting from a specific year. Each line represents one fusion event.
 
 ```txt
