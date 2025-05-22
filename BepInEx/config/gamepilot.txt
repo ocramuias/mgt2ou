@@ -1,33 +1,34 @@
-// NOTE GENERALI:
-// - Il nome del gioco è all'inizio della riga, senza tag.
-// - I tag sono racchiusi tra < e > e possono comparire in qualsiasi ordine.
+// =======================================================
+// === BASIC INFO ===
+//<Y1978>        // Release year (required). Example: <Y1995>
+//<G1>           // Main genre (integer). Example: <G2>
+//<SG0>          // Subgenre (optional). Example: <SG3>
+//<T4>           // Main theme (integer). Example: <T5>
+//<ST1>          // Sub-theme (optional). Example: <ST7>
+//<%85>          // Minimum review score expected (0–100). Example: <%90>
+//<TG2>          // Target group: 0 = kids, 1 = teens, 2 = adults, 3 = seniors, 4 = everyone
+// === CREATORS & OWNERSHIP ===
+//<P3>           // Publisher ID (NPC that will publish the game)
+//<D5>           // Developer ID (who creates the game)
+//<O2>           // Owner ID (who owns the IP)
+// === PLATFORMS ===
+//<PL49>         // Platform ID (repeatable up to 4 times: <PL1><PL2>...)
+//<EX>           // Exclusive release (sets `exclusive = true`)
+// === GAME RELATIONS ===
+//<SEQ:Title>    // Sequel of a game. Example: <SEQ:Mega Quest>
+//<REM:Title>    // Remaster of a game (only works if year ≥ 1987). Example: <REM:Mega Quest>
+//<SPIN:Title>   // Spinoff of a game. Example: <SPIN:Mega Quest>
+// === PORTING ===
+//<PORT:Title>   // Port of an existing game. Example: <PORT:Mega Quest>
+//<PORTM>        // Port type: Mobile
+//<PORTA>        // Port type: Arcade
+//<PORTP>        // Port type: PC
+// === ADDONS / EXPANSIONS ===
+//<ADDON:Title>        // Addon/expansion for a base game. Example: <ADDON:Mega Quest>
+//<ADDONSTANDALONE>    // Standalone expansion (does not require the base game)
 
-// TAG DISPONIBILI:
-// <P>     = ID del publisher (es. <P3>)
-// <Y>     = Anno di uscita (es. <Y1978>)
-// <G>     = Genere principale (es. <G1>)
-// <SG>    = Sottogenere (es. <SG0>)
-// <T>     = Tema principale (es. <T4>)
-// <ST>    = Sotto-tema (es. <ST1>)
-// <%>     = Valutazione minima desiderata (es. <%80>)
-// <TG>    = Target group (0=bambini, 1=teen, 2=adulti, 3=anziani, 4=tutti)
-// <PLx>   = ID della piattaforma principale (es. <PL49>)
-// <EX>    = Esclusiva (opzionale, se presente forza il flag `exclusive = true`)
-// <SEQ:Titolo>  = Sequel diretto del gioco indicato
-// <REM:Titolo>  = Remaster del gioco indicato
-// <SPIN:Titolo> = Spinoff del gioco indicato
-
-// --- TAG PER LA NUMERAZIONE AUTOMATICA ---
-// <ARA> = Indica che la numerazione automatica è in formato arabo (1, 2, 3, ...) [Not Needed]
-// <ROM> = Indica che la numerazione automatica è in formato romano (I, II, III, ...) [Not Needed]
-// Questi tag vanno messi solo nel gioco originale per indicare come devono essere numerati i sequel. [Not Needed]
-
-// BLOCCO SEQUEL AUTOMATICI:
-// - La mod imposta `noSpinOff = true` automaticamente, non serve usare tag <NOSPIN>.
-
-// ===========================
-// TITOLI NPC PER TEST (1976–1980)
-// ===========================
+// === FULL EXAMPLE ===
+// Mega Quest II <Y1997><G1><SG0><T4><D1><P3><O1><PL1><PL3><SEQ:Mega Quest><ROM><%85><TG2>
 
 // --- SERIE: Galaxy Quest (Developer 3, Publisher 3) ---
 Test Galaxy Quest <P3><O3><D3><Y1976><G1><SG0><T4><ST1><%78><TG2><PL49><EX>
@@ -35,6 +36,18 @@ Test Galaxy Quest II <D7><P3><O3><Y1977><G1><SG0><T4><ST1><%82><TG2><PL49><EX><S
 Test Galaxy Quest Remastered <D3><P3><O3><Y1978><G1><SG0><T4><ST1><%88><TG2><PL49><EX><REM:Test Galaxy Quest>
 Test Galaxy Quest: Alien Adventures <D12><P3><O3><Y1979><G5><SG2><T9><ST7><%74><TG3><PL49><SPIN:Test Galaxy Quest>
 Test Galaxy Quest <P3><O3><D3><Y1978><G1><SG0><T4><ST1><%78><TG2><PORT:Test Galaxy Quest><PORTA>
+Test Galaxy Quest Remastered <D3><P3><O3><Y1987><G1><SG0><T4><ST1><%88><TG2><PL49><EX><REM:Test Galaxy Quest>
+
+// Addon per il gioco base "Galaxy Quest"
+Test Galaxy Quest Expansion Pack <D3><P3><O3><Y1977><G1><SG0><T4><ST1><%85><TG2><PL49><ADDON:Test Galaxy Quest>
+// Addon Standalone basato su "Galaxy Quest"
+Test Galaxy Quest: Standalone DLC <D4><P3><O3><Y1977><G1><SG0><T4><ST1><%87><TG2><PL49><ADDON:Test Galaxy Quest><ADDONSTANDALONE>
+
+Test Zupapa <P3><O3><D3><Y1976><G1><SG0><T4><ST1><%78><TG2><PL49>
+Test Zupapa II <D7><P3><O3><Y1977><G1><SG0><T4><ST1><%82><TG2><PL49><SEQ:Test Zupapa>
+Test Zupapa Remastered <D3><P3><O3><Y1978><G1><SG0><T4><ST1><%88><TG2><PL49><REM:Test Zupapa>
+Test Zupapa: Dancing on the floor <D12><P3><O3><Y1979><G5><SG2><T9><ST7><%74><TG3><PL49><SPIN:Test Zupapa>
+Test Zupapa <P3><O3><D3><Y1978><G1><SG0><T4><ST1><%78><TG2><PORT:Test Zupapa><PORTA>
 
 // --- SINGOLO: Sword Age (Developer 12, Publisher 4) ---
 Test Sword Age <D12><P4><O4><Y1977><G2><SG1><T2><ST3><%81><TG1><PL49><EX>
