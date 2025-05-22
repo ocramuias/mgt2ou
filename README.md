@@ -56,9 +56,26 @@ Company 125 is hidden after the merger (not deleted, just deactivated).
 You can define multiple fusions for the same company if needed, in chronological order.
 
 
-📦 Compatibility
-The two mods are fully optional and work independently or together.
-Easily configurable via .txt files located in BepInEx/config.
+# 🎮 GamePilot Mod (for Mad Games Tycoon 2)
+
+**GamePilot** is a mod for *Mad Games Tycoon 2* that allows you to inject custom games into the simulated world. You can configure AI-generated games published by NPCs using a simple text file: `gamepilot.txt`.
+
+> ✅ Current version: `0.0.92`  
+> 🎯 Compatible with: Mad Games Tycoon 2 (Steam stable release)
+
+## 📦 Installation
+
+1. **Install BepInEx** (if not already):
+   - Download from: https://github.com/BepInEx/BepInEx/releases
+   - Extract it into the main game folder.
+
+2. **Copy the mod files** into `BepInEx/plugins/`:
+   - `GamePilot.dll`
+   - Place `gamepilot.txt` into `BepInEx/config/`
+
+3. (Optional) Enable debug logs by setting `debugMode = true` in code (already true by default).
+
+4. Launch the game. If the mod loads correctly, you'll see:
 
 🛠️ Requirements
 Requires BepInEx installed in your game.
